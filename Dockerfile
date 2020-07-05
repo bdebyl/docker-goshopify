@@ -7,6 +7,9 @@ WORKDIR /src
 RUN apk -v --update add git && \
     rm /var/cache/apk/*
 
+RUN mkdir .cache
+ENV XDG_CACHE_HOME=/src/.cache
+
 RUN go get github.com/bold-commerce/go-shopify
 
 VOLUME /src
