@@ -1,4 +1,4 @@
-FROM golang:alpine3.12
+FROM golang:alpine
 MAINTAINER Bastian de Byl <bastian@bdebyl.net>
 
 WORKDIR /src
