@@ -7,9 +7,6 @@ platform:
   arch: arm
 
 steps:
-  - name: build
-    image: plugins/docker
-
   - name: gate
     image: bdebyl/alpine-git
     commands:
@@ -18,6 +15,11 @@ steps:
       - export GITIGNORE="Dockerfile"
       - git diff --name-only $(git merge-base refs/remotes/origin/master HEAD)..HEAD | grep "$GITIGNORE" || exit 78
       - git diff --name-only HEAD~1..HEAD | grep "$GITIGNORE" || exit 78
+
+  - name: build
+    image: docker
+    commands:
+      - docker build .
 
   - name: publish
     image: plugins/docker
