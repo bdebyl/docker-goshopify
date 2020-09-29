@@ -12,5 +12,5 @@ ENV XDG_CACHE_HOME=/src/.cache
 
 RUN go get github.com/bold-commerce/go-shopify
 
-VOLUME /src
+VOLUME ["/src"]
 ENTRYPOINT ["go"]
