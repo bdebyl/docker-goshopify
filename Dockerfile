@@ -9,8 +9,8 @@ WORKDIR /src
 RUN apk -v --update add git && \
     rm /var/cache/apk/*
 
-RUN mkdir .cache && \
-    go get github.com/bold-commerce/go-shopify
+RUN mkdir .cache
+RUN go get github.com/bold-commerce/go-shopify
 
 VOLUME ["/src"]
 ENTRYPOINT ["go"]
