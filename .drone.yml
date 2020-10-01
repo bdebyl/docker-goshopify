@@ -40,3 +40,8 @@ steps:
     when:
       branch:
         - master
+---
+kind: signature
+hmac: cf147762a7c04e05791795c6cd739c544879512098760ca276063c3128b8362a
+
+...
