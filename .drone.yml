@@ -32,12 +32,11 @@ steps:
       password:
         from_secret: docker_password
       repo: bdebyl/goshopify
-      auto_tag: true
     when:
       branch:
         - master
 ---
 kind: signature
-hmac: 580a5d8dac295de4e8a928df055b576133b0b88c188633b42e1fda99350c35aa
+hmac: da2256923a5aab64309dfc3bb7d841ad1dfa23e69483b216e6d6694288f9239b
 
 ...
